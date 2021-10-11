@@ -21,11 +21,9 @@ class UserViewModel(private val repo:UserRepository):ViewModel(),Callback<List<G
     val data:LiveData<List<GithubUser>>
     get() = _data
 
-    init {
-        fetchData()
-    }
 
-    private fun fetchData() {
+
+    private suspend fun fetchData() {
         _loadingstate.postValue(LoadingState.LOADING)
         repo.getAllUsers().enqueue(this)
     }

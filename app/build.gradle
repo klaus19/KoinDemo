@@ -16,6 +16,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding=true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -37,6 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -56,4 +60,10 @@ dependencies {
     implementation "org.koin:koin-android:2.0.1"
     implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
     implementation 'org.koin:koin-androidx-scope:2.0.1'
+
+    // recyclerview dependency
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+
+    //cardview dependency
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

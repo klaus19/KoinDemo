@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface GithubApi {
     @GET("users")
-    fun getUsers():Call<List<GithubUser>>
+    suspend fun getUsers():Call<List<GithubUser>>
 }
